@@ -1,6 +1,7 @@
 # docker
 The following steps are to setup docker on CentOS 7.
 <code>
+
 $ sudo yum update
 
 $ curl -sSL https://get.docker.com/ | sh
