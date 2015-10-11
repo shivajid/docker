@@ -10,6 +10,7 @@ RUN yum install -y epel-release
 RUN yum install -y dhclient openssh-server openssh-clients supervisor lsof which gcc
 RUN yum install -y sudo tar wget ntp passwd
 
+
 # update libselinux. see https://github.com/sequenceiq/hadoop-docker/issues/14
 RUN yum update -y libselinux
 
@@ -39,6 +40,9 @@ EXPOSE 8080
 RUN service ntpd start
 RUN service sshd start
 
+RUN yum install -y java-1.7.0-openjdk-devel
 
+RUN mkdir /usr/java
+RUN /etc/alternatives/java_sdk_1.7.0 /usr/java/default
 
 
