@@ -1,4 +1,6 @@
 # docker
+
+## CentOS 7
 The following steps are to setup docker on CentOS 7.
 <code>
 
@@ -23,3 +25,6 @@ To create the docker group and add your user:
 
 Ensure Docker is running as a service
 sudo chkconfig docker on
+
+## Boot2Docker
+https://docs.docker.com/mac/step_one/
