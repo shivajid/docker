@@ -38,45 +38,49 @@ Use the Dockerfile in the repo to create a CentOS image for HDP Slave Node
 $ mkdir dockerimage
 $ cp DockerFile dockerimage/
 $ docker build --file=dockerimage/DockerFile ./dockerimage
+</code>
 
 ## This will list the newly create image
+<code>
 $ docker images 
-
+</code>
 ## Tag the image
-
-$docker tag shivajid/centos:hdp <imageid>
+<code>
+$docker tag shivajid/centos:hdp __imageid__
+</code>
 
 ## Create the docker instance. In this command we are opening all the ports. To open a port or a set of ports to teh has
-
+<code>
 $docker run -it -h node0 -P --privileged=true shivajid/centos:centos /bin/bash
-
+</code>
 
 
 ## User CTRL (P+Q) to exit the container. Do use exit.
 
 ## List all the running containers
-$docke ps
+
+  $docker ps
 
 ## Stop a container
 
-$docker stop __container_name_OR_id
+  $docker stop __container_name_OR_id
 
 ## Remove a container
 
-$docker rm __container_name_OR_id
+  $docker rm __container_name_OR_id
 
 ## To Validate. The container should be gone
 
-$ docker ps
+  $ docker ps
 
 ## To delete an image. Get the image id from running "docker image"
 
-$docker rmi __image_id
+  $docker rmi __image_id
 
 ## To Validae. Run 
 
-$ docker image
-</code>
+  $ docker image
+
 
 ## Install Slave Node on the docker images
 
