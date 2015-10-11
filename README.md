@@ -90,14 +90,14 @@ Use the Dockerfile in the repo to create a CentOS image for HDP Slave Node
 +  Install Slave Node on the docker images
 
 ### Setup the ssh keys
-
+<pre>
 <code>
 $service sshd star
 $ssh-copy-id root@node0
 $ ifconfig
 
 </code>
-
+</pre>
 
 Update the /etc/host file for the docker container with the ip address mapping for hdpdemo.hortonworks.com
 
