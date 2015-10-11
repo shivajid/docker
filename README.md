@@ -25,64 +25,70 @@ To create the docker group and add your user:
 * <code> $ docker run hello-world</code>
 
 Ensure Docker is running as a service
-sudo chkconfig docker on
+
+  sudo chkconfig docker on
 
 ### Boot2Docker for Mac and Windows
-https://docs.docker.com/mac/step_one/
+  https://docs.docker.com/mac/step_one/
 
 ## Create Docker images 
 
 Use the Dockerfile in the repo to create a CentOS image for HDP Slave Node
 
 <code>
-$ mkdir dockerimage
-$ cp DockerFile dockerimage/
-$ docker build --file=dockerimage/DockerFile ./dockerimage
+  $ mkdir dockerimage
+  $ cp DockerFile dockerimage/
+  $ docker build --file=dockerimage/DockerFile ./dockerimage
 </code>
 
-## This will list the newly create image
+
++ This will list the newly create image
+
 <code>
-$ docker images 
+  $ docker images 
 </code>
-## Tag the image
+
++ Tag the image
+
 <code>
-$docker tag shivajid/centos:hdp __imageid__
+  $docker tag shivajid/centos:hdp __imageid__
 </code>
 
-## Create the docker instance. In this command we are opening all the ports. To open a port or a set of ports to teh has
++ Create the docker instance. In this command we are opening all the ports. To open a port or a set of ports to teh has
+
 <code>
-$docker run -it -h node0 -P --privileged=true shivajid/centos:centos /bin/bash
+  $docker run -it -h node0 -P --privileged=true shivajid/centos:centos /bin/bash
 </code>
 
 
-## User CTRL (P+Q) to exit the container. Do use exit.
++  User CTRL (P+Q) to exit the container. Do use exit.
 
-## List all the running containers
++ List all the running containers
 
   $docker ps
 
-## Stop a container
++  Stop a container
 
   $docker stop __container_name_OR_id
 
-## Remove a container
++  Remove a container
 
   $docker rm __container_name_OR_id
 
-## To Validate. The container should be gone
++ To Validate. The container should be gone
 
   $ docker ps
 
-## To delete an image. Get the image id from running "docker image"
++  To delete an image. Get the image id from running "docker image"
 
   $docker rmi __image_id
 
-## To Validae. Run 
++  To Validae. Run 
 
   $ docker image
 
 
-## Install Slave Node on the docker images
++  Install Slave Node on the docker images
 
 ### Setup the ssh keys
 
