@@ -43,6 +43,6 @@ RUN service sshd start
 RUN yum install -y java-1.7.0-openjdk-devel
 
 RUN mkdir /usr/java
-RUN /etc/alternatives/java_sdk_1.7.0 /usr/java/default
+RUN ln -s /etc/alternatives/java_sdk_1.7.0 /usr/java/default
 
 
