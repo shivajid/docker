@@ -50,13 +50,13 @@ Use the Dockerfile in the repo to create a CentOS image for HDP Slave Node
 + Tag the image
 
 <code>
-  $docker tag shivajid/centos:hdp __imageid__
+  $docker tag shivajid/centos:hdp23 __imageid__
 </code>
 
 + Create the docker instance. In this command we are opening all the ports. To open a port or a set of ports to teh has
 
 <code>
-  $docker run -it -h node0 -P --privileged=true shivajid/centos:centos /bin/bash
+  $docker run -it -h node0 -P --privileged=true shivajid/centos:23 /bin/bash
 </code>
 
 
